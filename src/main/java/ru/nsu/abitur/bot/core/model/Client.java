@@ -15,6 +15,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @Getter
 @Setter
+
 /**
  * Сущность для хранения клиента бота в БД.
  */
