@@ -21,6 +21,7 @@ import java.time.Instant;
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "client_id")
     private Long id;
     @Column(unique = true)
     private Long telegramId;
