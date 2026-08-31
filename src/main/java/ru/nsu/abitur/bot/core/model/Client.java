@@ -8,8 +8,8 @@ import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.Instant;
-import java.util.List;
 
+@Table(name = "clients")
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
