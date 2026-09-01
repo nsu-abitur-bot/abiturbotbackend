@@ -1,10 +1,7 @@
 package ru.nsu.abitur.bot.core.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.Instant;
@@ -15,7 +12,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @Getter
 @Setter
-
+@Builder
 /**
  * Сущность для хранения клиента бота в БД.
  */
@@ -25,9 +22,9 @@ public class Client {
     @Column(name = "client_id")
     private Long id;
     @Column(unique = true)
-    private Long telegramId;
+    private String telegramId;
     @Column(unique = true)
-    private Long maxId;
+    private String maxId;
     private Long applicantId;
     @CreatedDate
     @Column(updatable = false)
